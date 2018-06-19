@@ -2,6 +2,7 @@
 
 use app\helpers\Arr;
 use app\helpers\Str;
+use Symfony\Component\VarDumper\VarDumper;
 
 if (! function_exists('array_add')) {
     /**
@@ -718,5 +719,12 @@ if (! function_exists('with')) {
     function with($object)
     {
         return $object;
+    }
+}
+
+if (! function_exists('dump')) {
+    function dump($object)
+    {
+        VarDumper::dump($object);
     }
 }

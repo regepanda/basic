@@ -18,8 +18,7 @@ class ProductController extends Controller
         $products = (new ActivityProduct())->getProductByQueryBuilder()[0];
         $products1 = array_except($products, ['product_id']);
         $products2 = array_only($products, ['product_id']);
-        echo '<pre>';
-        print_r($products1);
-        print_r($products2);die;
+        dump($products1);
+        dump($products2);die;
     }
 }

@@ -624,19 +624,6 @@ if (! function_exists('str_replace_last')) {
     }
 }
 
-if (! function_exists('str_singular')) {
-    /**
-     * Get the singular form of an English word.
-     *
-     * @param  string  $value
-     * @return string
-     */
-    function str_singular($value)
-    {
-        return Str::singular($value);
-    }
-}
-
 if (! function_exists('str_slug')) {
     /**
      * Generate a URL friendly "slug" from a given string.

@@ -10,6 +10,8 @@ namespace app\controllers\activity;
 
 use yii\web\Controller;
 use app\models\activity\ActivityProduct;
+use Yii;
+use yii\web\Response;
 
 class ProductController extends Controller
 {
@@ -20,5 +22,27 @@ class ProductController extends Controller
         $products2 = array_only($products, ['product_id']);
         dump($products1);
         dump($products2);die;
+    }
+
+    public function redisCluster()
+    {
+        $servers = array(
+            '127.0.0.1:7000',
+            '127.0.0.1:7001',
+            '127.0.0.1:7002',
+            '127.0.0.1:7003',
+            '127.0.0.1:7004',
+            '127.0.0.1:7005'
+        );
+
+        $objCluster = new \RedisCluster(NULL, $servers);
+        var_dump($objCluster->get('username'));
+        $products = (new ActivityProduct())->executeSql();
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return [
+            'message' => 'hello world',
+            'code' => 0,
+            'data' => $products
+        ];
     }
 }

@@ -17,6 +17,8 @@ class ProductController extends Controller
 {
     public function actionGet()
     {
+        $this->redisCluster();
+        die;
 //        $products = (new ActivityProduct())->getProductByQueryBuilder()[0];
 //        $products1 = array_except($products, ['product_id']);
 //        $products2 = array_only($products, ['product_id']);

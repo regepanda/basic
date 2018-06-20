@@ -17,11 +17,16 @@ class ProductController extends Controller
 {
     public function actionGet()
     {
-        $products = (new ActivityProduct())->getProductByQueryBuilder()[0];
-        $products1 = array_except($products, ['product_id']);
-        $products2 = array_only($products, ['product_id']);
-        dump($products1);
-        dump($products2);die;
+//        $products = (new ActivityProduct())->getProductByQueryBuilder()[0];
+//        $products1 = array_except($products, ['product_id']);
+//        $products2 = array_only($products, ['product_id']);
+        $products = (new ActivityProduct())->executeSql();
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return [
+            'message' => 'hello world',
+            'code' => 0,
+            'data' => $products
+        ];
     }
 
     public function redisCluster()
@@ -36,13 +41,6 @@ class ProductController extends Controller
         );
 
         $objCluster = new \RedisCluster(NULL, $servers);
-        var_dump($objCluster->get('username'));
-        $products = (new ActivityProduct())->executeSql();
-        Yii::$app->response->format = Response::FORMAT_JSON;
-        return [
-            'message' => 'hello world',
-            'code' => 0,
-            'data' => $products
-        ];
+        dump($objCluster->get('username'));
     }
 }

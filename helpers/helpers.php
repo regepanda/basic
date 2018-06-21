@@ -163,21 +163,6 @@ if (! function_exists('array_only')) {
     }
 }
 
-if (! function_exists('array_pluck')) {
-    /**
-     * Pluck an array of values from an array.
-     *
-     * @param  array   $array
-     * @param  string|array  $value
-     * @param  string|array|null  $key
-     * @return array
-     */
-    function array_pluck($array, $value, $key = null)
-    {
-        return Arr::pluck($array, $value, $key);
-    }
-}
-
 if (! function_exists('array_prepend')) {
     /**
      * Push an item onto the beginning of an array.

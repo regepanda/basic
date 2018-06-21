@@ -43,4 +43,17 @@ class ActivityProduct extends ActiveRecord
             ->all(\Yii::$app->activity);
         return $data;
     }
+
+    public function executeSql()
+    {
+        $productId = 13356;
+        $sql = "select * 
+             from activity_product 
+             JOIN  product_info ON product_info.product_id = activity_product.product_id
+             where activity_product.product_id=".$productId." 
+             order by activity_product.product_id desc
+             limit 1";
+        $data = \Yii::$app->activity->createCommand($sql)->queryAll();
+        return $data;
+    }
 }

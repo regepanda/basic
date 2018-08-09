@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27bf8baf1966189944be3bb9bd042946",
+    "content-hash": "715fa6afcd6f583da52738b48924f842",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -337,7 +337,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/0e6545672d8c9ce70dd472adc2f8b03155a46f73.zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0e6545672d8c9ce70dd472adc2f8b03155a46f73",
                 "reference": "0e6545672d8c9ce70dd472adc2f8b03155a46f73",
                 "shasum": ""
             },
@@ -395,6 +395,47 @@
                 "dump"
             ],
             "time": "2018-04-26T12:42:15+00:00"
+        },
+        {
+            "name": "tsingsun/yii2-swoole",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tsingsun/yii2-swoole.git",
+                "reference": "7b91eceb70a27e9e825d21f45be1231d61bfc16a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tsingsun/yii2-swoole/zipball/7b91eceb70a27e9e825d21f45be1231d61bfc16a",
+                "reference": "7b91eceb70a27e9e825d21f45be1231d61bfc16a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "yiisoft/yii2": "~2.0.12"
+            },
+            "require-dev": {
+                "eaglewu/swoole-ide-helper": "dev-master",
+                "phpunit/phpunit": "^4.8",
+                "yiisoft/yii2-redis": "^2.0"
+            },
+            "suggest": {
+                "ext-swoole": "install ext-swoole when use php swoole extension"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "tsingsun\\swoole\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "run yii2 in swoole coroutine mode",
+            "keywords": [
+                "coroutine",
+                "swoole",
+                "yii2"
+            ],
+            "time": "2018-03-22T12:52:38+00:00"
         },
         {
             "name": "yiisoft/yii2",

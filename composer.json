@@ -23,7 +23,8 @@
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "symfony/var-dumper": "^3.4"
+        "symfony/var-dumper": "^3.4",
+        "tsingsun/yii2-swoole": "^1.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

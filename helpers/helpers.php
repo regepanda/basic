@@ -163,21 +163,6 @@ if (! function_exists('array_only')) {
     }
 }
 
-if (! function_exists('array_pluck')) {
-    /**
-     * Pluck an array of values from an array.
-     *
-     * @param  array   $array
-     * @param  string|array  $value
-     * @param  string|array|null  $key
-     * @return array
-     */
-    function array_pluck($array, $value, $key = null)
-    {
-        return Arr::pluck($array, $value, $key);
-    }
-}
-
 if (! function_exists('array_prepend')) {
     /**
      * Push an item onto the beginning of an array.
@@ -544,20 +529,6 @@ if (! function_exists('str_limit')) {
     function str_limit($value, $limit = 100, $end = '...')
     {
         return Str::limit($value, $limit, $end);
-    }
-}
-
-if (! function_exists('str_plural')) {
-    /**
-     * Get the plural form of an English word.
-     *
-     * @param  string  $value
-     * @param  int     $count
-     * @return string
-     */
-    function str_plural($value, $count = 2)
-    {
-        return Str::plural($value, $count);
     }
 }
 
